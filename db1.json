@@ -1,0 +1,214 @@
+﻿{
+	"students": [
+		{
+		"id": 1,
+		"fName": "Jamalia",
+		"lName": "Gray",
+		"semester": "5",
+		"password": "VNT28AHF3NL"
+	},
+	{
+		"id": 2,
+		"fName": "Ronan",
+		"lName": "Acosta",
+		"semester": "1",
+		"password": "CDU64OXD0CH"
+	},
+	{
+		"id": 3,
+		"fName": "Kellie",
+		"lName": "Heath",
+		"semester": "1",
+		"password": "FDO51DMV9SG"
+	},
+	{
+		"id": 4,
+		"fName": "Belle",
+		"lName": "Avila",
+		"semester": "8",
+		"password": "LBW92ZCJ3DW"
+	},
+	{
+		"id": 5,
+		"fName": "Madeson",
+		"lName": "Butler",
+		"semester": "2",
+		"password": "HHP51UHX3PD"
+	},
+	{
+		"id": 6,
+		"fName": "Astra",
+		"lName": "Acosta",
+		"semester": "6",
+		"password": "DDK36CQQ5XA"
+	},
+	{
+		"id": 7,
+		"fName": "Ethan",
+		"lName": "Monroe",
+		"semester": "8",
+		"password": "EGN67NJK5VZ"
+	},
+	{
+		"id": 8,
+		"fName": "Gay",
+		"lName": "Goodman",
+		"semester": "4",
+		"password": "GZX33IIN9SP"
+	},
+	{
+		"id": 9,
+		"fName": "Martina",
+		"lName": "Delacruz",
+		"semester": "5",
+		"password": "MLM78JOO5OG"
+	},
+	{
+		"id": 10,
+		"fName": "Xenos",
+		"lName": "Boyer",
+		"semester": "1",
+		"password": "GDF51TKO3MQ"
+	},
+	{
+		"id": 11,
+		"fName": "Dante",
+		"lName": "Wilkins",
+		"semester": "7",
+		"password": "EQL21SBO6PW"
+	},
+	{
+		"id": 12,
+		"fName": "Jesse",
+		"lName": "Crane",
+		"semester": "6",
+		"password": "GWZ70DZQ9CR"
+	},
+	{
+		"id": 13,
+		"fName": "Peter",
+		"lName": "Campbell",
+		"semester": "2",
+		"password": "HOX60EQT8UI"
+	},
+	{
+		"id": 14,
+		"fName": "Rebekah",
+		"lName": "Bullock",
+		"semester": "1",
+		"password": "IQF01PKP6PD"
+	},
+	{
+		"id": 15,
+		"fName": "Igor",
+		"lName": "Mcgowan",
+		"semester": "7",
+		"password": "CCI27BPW4HV"
+	},
+	{
+		"id": 16,
+		"fName": "Catherine",
+		"lName": "Burke",
+		"semester": "3",
+		"password": "TKV49RGG2GN"
+	},
+	{
+		"id": 17,
+		"fName": "Nathaniel",
+		"lName": "Peterson",
+		"semester": "4",
+		"password": "HOQ90DQP6KZ"
+	},
+	{
+		"id": 18,
+		"fName": "Rafael",
+		"lName": "Harrell",
+		"semester": "8",
+		"password": "GON69AQV9TU"
+	},
+	{
+		"id": 19,
+		"fName": "Mari",
+		"lName": "Griffith",
+		"semester": "2",
+		"password": "IYX62FSN8TP"
+	},
+	{
+		"id": 20,
+		"fName": "Katelyn",
+		"lName": "House",
+		"semester": "1",
+		"password": "ILD29NOC6QP"
+	},
+	{
+		"id": 21,
+		"fName": "Armando",
+		"lName": "Singleton",
+		"semester": "7",
+		"password": "ORS33LBM8HY"
+	},
+	{
+		"id": 22,
+		"fName": "Shelby",
+		"lName": "Richmond",
+		"semester": "4",
+		"password": "HST73XID4UQ"
+	},
+	{
+		"id": 23,
+		"fName": "Lester",
+		"lName": "Harrington",
+		"semester": "6",
+		"password": "NXV37QRK9XP"
+	},
+	{
+		"id": 24,
+		"fName": "Kenyon",
+		"lName": "Torres",
+		"semester": "6",
+		"password": "POQ38TJU2JK"
+	},
+	{
+		"id": 25,
+		"fName": "Tyler",
+		"lName": "Phelps",
+		"semester": "5",
+		"password": "UHZ78NKL0BQ"
+	},
+	{
+		"id": 26,
+		"fName": "Raya",
+		"lName": "Spencer",
+		"semester": "6",
+		"password": "PHT61TYP1WQ"
+	},
+	{
+		"id": 27,
+		"fName": "Axel",
+		"lName": "Pate",
+		"semester": "4",
+		"password": "ZRA21VCM1MA"
+	},
+	{
+		"id": 28,
+		"fName": "Shafira",
+		"lName": "Payne",
+		"semester": "7",
+		"password": "FOI67QOM8FV"
+	},
+	{
+		"id": 29,
+		"fName": "September",
+		"lName": "Dunn",
+		"semester": "4",
+		"password": "FSB52ZJZ3GC"
+	},
+	{
+		"id": 30,
+		"fName": "Basia",
+		"lName": "Matthews",
+		"semester": "1",
+		"password": "QIM56CFD0AX"
+	}
+	]
+}
