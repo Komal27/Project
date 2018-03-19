@@ -1,26 +1,33 @@
-function loadAJAX() {
-  var request;
-  var user = $('#uname').val();
-  var password = $('#pwd').val();
+function validate() {
+  const user = {
+    username:  $('#uname').val() , password: $('#pwd').val()
+  }
+  debugger;
+  if (user.username !== "" && user.username !== undefined) {
+    console.log(getUser(user.username));
+  }
+}
 
+function getUser(userName) {
+  const url = 'http://localhost:3009/students/'+userName;
+
+  // TODO: convert this to synchronus call and get value
+  const userObject = loadAJAX(url);
+  return userObject;
+}
+
+function loadAJAX(url) {
+  let request;
   if (window.XMLHttpRequest) {
     request = new XMLHttpRequest();
   } else {
     request = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  request.open('GET', 'db1.json');
+
+  request.open('GET', url);
   request.onreadystatechange = function() {
     if ((request.readyState === 4) && (request.status === 200)) {
-      var items = JSON.parse(request.responseText);
-      for (var key in items) {
-        if ((user == items[key].fName) && (password == items[key].password)) {
-          alert("Valid User");
-          //window.location="welcome.html"
-        } else {
-         window.location="index.html";
-        }
-      }
-
+      return request.responseText;
     }
   }
   request.send();
