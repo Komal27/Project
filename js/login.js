@@ -1,34 +1,59 @@
-function validate() {
-  const user = {
-    username:  $('#uname').val() , password: $('#pwd').val()
+var userDetails = [{
+    uName: "Komal",
+    uPass: "abc123"
+  },
+  {
+    uName: "Poorva",
+    uPass: "def234"
   }
-  debugger;
-  if (user.username !== "" && user.username !== undefined) {
-    console.log(getUser(user.username));
-  }
-}
+];
 
-function getUser(userName) {
-  const url = 'http://localhost:3009/students/'+userName;
-
-  // TODO: convert this to synchronus call and get value
-  const userObject = loadAJAX(url);
-  return userObject;
-}
-
-function loadAJAX(url) {
+function loadAJAX() {
   let request;
+  var url = "http://localhost:3009/students";
   if (window.XMLHttpRequest) {
     request = new XMLHttpRequest();
   } else {
     request = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
-  request.open('GET', url);
+request.open('GET', url,true);
   request.onreadystatechange = function() {
     if ((request.readyState === 4) && (request.status === 200)) {
-      return request.responseText;
+
+      var jsonData = JSON.stringify(url);
+      var jsonObj = JSON.parse(jsonData);
+      for (var i=0;i<jsonObj.length;i++){
+
+          console.log(jsonObj.fName);
+
+      }
     }
   }
+
   request.send();
+}
+
+function validate() {
+  var name = document.forms["login"]["uname"].value;
+  var pass = document.forms["login"]["pwd"].value;
+
+  if (name === "" && pass === "") {
+    document.getElementById('error').innerHTML = 'Enter Username & Password';
+    return;
+  }
+  if (name === "" && pass !== null) {
+    document.getElementById('error').innerHTML = 'Enter Username';
+    return;
+  }
+
+  if (pass === "" && name !== null) {
+    document.getElementById('error').innerHTML = 'Enter Password';
+    return;
+  }
+
+  if (pass !== "" && name !== "") {
+    return loadAJAX();
+  }
+
 }
