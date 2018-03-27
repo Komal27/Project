@@ -1,13 +1,3 @@
-var userDetails = [{
-    uName: "Komal",
-    uPass: "abc123"
-  },
-  {
-    uName: "Poorva",
-    uPass: "def234"
-  }
-];
-
 function loadAJAX() {
   let request;
   var url = "http://localhost:3009/students";
