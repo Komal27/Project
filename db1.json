@@ -1,5 +1,5 @@
-{
-  "students":  [
+
+   var students =  [
   		{
   		"id": "jgray",
   		"fName": "Jamalia",
@@ -36,4 +36,3 @@
   		"password": "HHP51UHX3PD"
   	}
   ]
-}

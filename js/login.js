@@ -1,28 +1,28 @@
-function loadAJAX() {
-  let request;
-  var url = "http://localhost:3009/students";
-  if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-  } else {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
-  }
+function getUserResponse(url) {
+  var promiseObj = new Promise(function(resolve, reject) {
+    let request;
+    if (window.XMLHttpRequest) {
+      request = new XMLHttpRequest();
+    } else {
+      request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
 
-request.open('GET', url,true);
-  request.onreadystatechange = function() {
-    if ((request.readyState === 4) && (request.status === 200)) {
-
-      var jsonData = JSON.stringify(url);
-      var jsonObj = JSON.parse(jsonData);
-      for (var i=0;i<jsonObj.length;i++){
-
-          console.log(jsonObj.fName);
-
+    request.open('GET', url);
+    request.onreadystatechange = function() {
+      if (request.readyState === 4 && request.status === 200) {
+        var respJson = JSON.parse(this.responseText);
+        return resolve(respJson);
       }
     }
-  }
-
-  request.send();
+    try {
+      request.send();
+    } catch (e) {
+      return reject(e)
+    }
+  });
+  return promiseObj;
 }
+
 
 function validate() {
   var name = document.forms["login"]["uname"].value;
@@ -43,7 +43,13 @@ function validate() {
   }
 
   if (pass !== "" && name !== "") {
-    return loadAJAX();
-  }
+    var userDataPromise = getUserResponse('http://localhost:3009/students/' + name);
+    userDataPromise.then(function(responseData) {
+      console.log(responseData);
+    });
+    userDataPromise.catch(function(error) {
+      console.log(error);
+    });
 
+  }
 }
