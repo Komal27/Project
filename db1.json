@@ -1,38 +1,62 @@
-
-   var students =  [
-  		{
-  		"id": "jgray",
-  		"fName": "Jamalia",
-  		"lName": "Gray",
-  		"semester": "5",
-  		"password": "VNT28AHF3NL"
-  	},
-  	{
-  		"id": "rAcosta",
-  		"fName": "Ronan",
-  		"lName": "Acosta",
-  		"semester": "1",
-  		"password": "CDU64OXD0CH"
-  	},
-  	{
-  		"id": "abc112233",
-  		"fName": "Kellie",
-  		"lName": "Heath",
-  		"semester": "1",
-  		"password": "FDO51DMV9SG"
-  	},
-  	{
-  		"id": "masterOfNone",
-  		"fName": "Belle",
-  		"lName": "Avila",
-  		"semester": "8",
-  		"password": "LBW92ZCJ3DW"
-  	},
-  	{
-  		"id": "madisonAvenue",
-  		"fName": "Madeson",
-  		"lName": "Butler",
-  		"semester": "2",
-  		"password": "HHP51UHX3PD"
-  	}
-  ]
+{
+  "students": [{
+      "id": "rblaydon0",
+      "password": "8NT2jusb",
+      "firstName": "Rivkah",
+      "lastName": "Blaydon",
+      "email": "rblaydon0@wisc.edu",
+      "gender": "Female",
+      "semester": 1,
+      "cwid": "15-3720361",
+      "courseWork": []
+    },
+    {
+      "id": "nbowmaker1",
+      "password": "oieQbyr",
+      "firstName": "Nowell",
+      "lastName": "Bowmaker",
+      "email": "nbowmaker1@mayoclinic.com",
+      "gender": "Male",
+      "semester": 8,
+      "cwid": "41-3868949",
+      "courseWork": []
+    },
+    {
+      "id": "ekempton2",
+      "password": "7Ez8Hiv6e",
+      "firstName": "Ebeneser",
+      "lastName": "Kempton",
+      "email": "ekempton2@simplemachines.org",
+      "gender": "Male",
+      "semester": 8,
+      "cwid": "95-4302219",
+      "courseWork": []
+    },
+    {
+      "id": "fgibbs3",
+      "password": "eEwfjGTfQp",
+      "firstName": "Franchot",
+      "lastName": "Gibbs",
+      "email": "fgibbs3@slideshare.net",
+      "gender": "Male",
+      "semester": 1,
+      "cwid": "23-3626736",
+      "courseWork": []
+    },
+    {
+      "id": "test",
+      "password": "test",
+      "firstName": "test first name",
+      "lastName": "test last name",
+      "email": "testEmail@slideshare.net",
+      "gender": "Male",
+      "semester": 1,
+      "cwid": "23-test",
+      "courseWork": []
+    }
+  ],
+  "allSubjects": [{
+    "id":"sem1",
+    "subjects": ["CPSC 121", "CPSC 122", "MATH 150A", "MATH 270A"]
+    }, {}, {}, {}]
+}

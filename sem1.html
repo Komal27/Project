@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portal Dashboard</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="js/server.js" type="text/javascript"></script>
+  <script src="js/session.js" type="text/javascript"></script>
+  <script src="js/subjects.js" type="text/javascript"></script>
+  <script src="js/pageDetails.js" type="text/javascript"></script>
+  </script>
+</head>
+
+<body>
+  <div class="sidenav">
+    <img src="img/avatar.png" class="avatar"></img>
+    <a href="#">About</a>
+    <a href="#">Grades</a>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+  <!-- Page content -->
+  <div class="main">
+    <div class="portal-details">
+      <p id="student-title"></p>
+      <p id="student-sem"></p>
+    </div>
+
+    <form id = "subject-select">
+    <div class="subject-list" id="subjects">
+      <p> Select the courses fromt the following list: </p>
+      <p> NOTE - ALL THE BELOW COURSES ARE MANDATORY IN ORDER TO COMPLETE THE PROGRAM IN 8 SEMESTERS OR YOU CAN SELECT MINIMUM 4 SUBJECTS </p>
+
+      <div id="subjects-div">
+
+        <input type="checkbox" name="check" value="cpsc121"><label  id="cpsc121"></label></input>
+        <input type="checkbox" name="check" value="cpsc122"><label  id="cpsc122"></label></input>
+        <input type="checkbox" name="check" value="math150"><label  id="math150"></label></input>
+        <input type="checkbox" name="check" value="math270"><label  id="math270"></label></input>
+      </div>
+
+    </div>
+    <div class="enroll-btn">
+      <input type="button" value="Enroll" onclick="confirmSubjects()"></input>
+    </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+  getuserDetails();
+  getSubjects();
+  confirmSubjects();
+</script>
