@@ -1,14 +1,3 @@
-function getUserResponse(url) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.onload = () => resolve(JSON.parse(xhr.responseText));
-    xhr.onerror = () => reject(JSON.parse(xhr.statusText));
-    xhr.send();
-  });
-}
-
-
 function validate() {
   var name = document.forms["login"]["uname"].value;
   var pass = document.forms["login"]["pwd"].value;
@@ -28,15 +17,20 @@ function validate() {
   }
 
   if (pass !== "" && name !== "") {
-    var userDataPromise = getUserResponse('http://localhost:3009/students/' + name);
+    var userDataPromise = getFromServer('http://localhost:3009/students/' + name);
     userDataPromise.then(function(responseData) {
       if (responseData.password == pass) {
-        console.log('authorized');
+        let pageToLand;
+        if (responseData.semester === 1) {
+          pageToLand = 'sem1.html';
+        } else {
+          pageTogo = 'portal.html';
+        }
+        setInSession('userLoggedIn', responseData);
+        window.location.href = pageToLand;
       } else {
-        console.log(' do not match');
+        document.getElementById('error').innerHTML = 'Enter Correct Password';
       }
     });
-
-
   }
 }
