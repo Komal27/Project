@@ -36,15 +36,12 @@
 
       <div id="subjects-div">
 
-        <input type="checkbox" name="check" value="cpsc121"><label  id="cpsc121"></label></input>
-        <input type="checkbox" name="check" value="cpsc122"><label  id="cpsc122"></label></input>
-        <input type="checkbox" name="check" value="math150"><label  id="math150"></label></input>
-        <input type="checkbox" name="check" value="math270"><label  id="math270"></label></input>
+
       </div>
 
     </div>
     <div class="enroll-btn">
-      <input type="button" value="Enroll" onclick="confirmSubjects()"></input>
+      <input type="button" value="Enroll" onclick="getSelection();"></input>
     </div>
     </form>
 
@@ -56,5 +53,5 @@
 <script>
   getuserDetails();
   getSubjects();
-  confirmSubjects();
+   getSelection();
 </script>
