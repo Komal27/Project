@@ -5,22 +5,27 @@ function getuserDetails() {
 }
 
 function setSubjectsInPage(subject) {
-  for(var i=0;i<=subject.length;i++) {
-    document.getElementById('cpsc121').innerHTML = subject[0];
-    document.getElementById('cpsc122').innerHTML = subject[1];
-    document.getElementById('math150').innerHTML = subject[2];
-    document.getElementById('math270').innerHTML = subject[3];
+  for (var i = 0; i < subject.length; i++) {
+    var inputBox = '<input type="checkbox" id="check" name="subcheck"><label for="subcheck' + subject[i] + '">' + subject[i] + '</label></input>';
+    document.getElementById('subjects-div').innerHTML += inputBox;
   }
-
 }
 
-function confirmSubjects() {
-  var sub = document.getElementsByName('name');
-  		var selectedsub = "";
-  		for(var i=0; i<sub.length; i++)
-  			if(sub[i].checked === true) {
-  				selectedsub+= sub[i].value+"\n";
-  		}
-      console.log('selectedsub',selectedsub);
+function GetSelection() {
+  var x = document.getElementsByName('subcheck');
+  var y = $(":checked").next('label').text();
+
+  var checked = 0;
+  for (var i = 0; i < x.length; i++) {
+    if (x[i].checked)
+      checked++;
+  }
+
+  if (checked > 2) {
+    console.log("Selected", y);
+
+  } else {
+    console.log("Please select");
+  }
 
 }
