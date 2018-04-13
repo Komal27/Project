@@ -6,26 +6,31 @@ function getuserDetails() {
 
 function setSubjectsInPage(subject) {
   for (var i = 0; i < subject.length; i++) {
-    var inputBox = '<input type="checkbox" id="check" name="subcheck"><label for="subcheck' + subject[i] + '">' + subject[i] + '</label></input>';
-    document.getElementById('subjects-div').innerHTML += inputBox;
+    let inputCheckbox = document.createElement('INPUT');
+    inputCheckbox.setAttribute('type', 'checkbox');
+    inputCheckbox.setAttribute('id', subject[i]);
+    inputCheckbox.setAttribute('value', subject[i]);
+    inputCheckbox.setAttribute('name', 'selectedSubjects');
+    inputCheckbox.setAttribute('class', 'sub-check');
+
+    let inputCheckboxLabel = document.createElement('LABEL');
+    let inputCheckboxLabelText = document.createTextNode(subject[i]);
+    inputCheckboxLabel.setAttribute('for', subject[i]);
+    inputCheckboxLabel.appendChild(inputCheckboxLabelText);
+
+    document.querySelector('#subjects-div').appendChild(inputCheckbox);
+    document.querySelector('#subjects-div').appendChild(inputCheckboxLabel);
+    document.querySelector('#subjects-div').appendChild(document.createElement('BR'));
   }
 }
 
-function GetSelection() {
-  var x = document.getElementsByName('subcheck');
-  var y = $(":checked").next('label').text();
-
-  var checked = 0;
-  for (var i = 0; i < x.length; i++) {
-    if (x[i].checked)
-      checked++;
-  }
-
-  if (checked > 2) {
-    console.log("Selected", y);
-
-  } else {
-    console.log("Please select");
-  }
-
+function selectedSub() {
+    let allSubjects = document.querySelectorAll('input[name=selectedSubjects]');
+    let selectedResult = [];
+    for (var i = 0; i < allSubjects.length; i++) {
+      if (allSubjects[i].checked) {
+          selectedResult.push(allSubjects[i].value);
+      }
+    }
+    setSubjectInUserCourseWork(selectedResult);
 }

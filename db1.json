@@ -1,5 +1,6 @@
 {
-  "students": [{
+  "students": [
+    {
       "id": "rblaydon0",
       "password": "8NT2jusb",
       "firstName": "Rivkah",
@@ -52,11 +53,23 @@
       "gender": "Male",
       "semester": 1,
       "cwid": "23-test",
-      "courseWork": []
+      "courseWork": [
+        "MATH 270A"
+      ]
     }
   ],
-  "allSubjects": [{
-    "id":"sem1",
-    "subjects": ["CPSC 121", "CPSC 122", "MATH 150A", "MATH 270A"]
-    }, {}, {}, {}]
+  "allSubjects": [
+    {
+      "id": "sem1",
+      "subjects": [
+        "CPSC 121",
+        "CPSC 122",
+        "MATH 150A",
+        "MATH 270A"
+      ]
+    },
+    {},
+    {},
+    {}
+  ]
 }

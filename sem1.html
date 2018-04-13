@@ -29,20 +29,17 @@
       <p id="student-sem"></p>
     </div>
 
-    <form id = "subject-select">
-    <div class="subject-list" id="subjects">
-      <p> Select the courses fromt the following list: </p>
-      <p> NOTE - ALL THE BELOW COURSES ARE MANDATORY IN ORDER TO COMPLETE THE PROGRAM IN 8 SEMESTERS OR YOU CAN SELECT MINIMUM 4 SUBJECTS </p>
+    <form id="subject-select">
+      <div class="subject-list" id="subjects">
+        <p> Select the courses fromt the following list: </p>
+        <p> NOTE - ALL THE BELOW COURSES ARE MANDATORY IN ORDER TO COMPLETE THE PROGRAM IN 8 SEMESTERS OR YOU CAN SELECT MINIMUM 4 SUBJECTS </p>
 
-      <div id="subjects-div">
-
+        <div id="subjects-div"></div>
 
       </div>
-
-    </div>
-    <div class="enroll-btn">
-      <input type="button" value="Enroll" onclick="getSelection();"></input>
-    </div>
+      <div class="enroll-btn">
+        <input type="button" value="Enroll" id="enrol-btn" onclick="selectedSub();"></input>
+      </div>
     </form>
 
   </div>
@@ -53,5 +50,4 @@
 <script>
   getuserDetails();
   getSubjects();
-   getSelection();
 </script>
