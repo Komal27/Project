@@ -22,8 +22,8 @@ function postToServer(url, data) {
 function putToServer(url, data) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
-    xhr.open("PUT", url);
-    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.open("PUT", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
     xhr.onload = () => resolve(JSON.parse(xhr.responseText));
     xhr.onerror = () => reject(JSON.parse(xhr.statusText));
     xhr.send(JSON.stringify(data));

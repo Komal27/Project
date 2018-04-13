@@ -54,7 +54,9 @@
       "semester": 1,
       "cwid": "23-test",
       "courseWork": [
-        "MATH 270A"
+        "CPSC_121",
+        "CPSC_122",
+        "MATH_150A"
       ]
     }
   ],
@@ -62,10 +64,10 @@
     {
       "id": "sem1",
       "subjects": [
-        "CPSC 121",
-        "CPSC 122",
-        "MATH 150A",
-        "MATH 270A"
+        "CPSC_121",
+        "CPSC_122",
+        "MATH_150A",
+        "MATH_270A"
       ]
     },
     {},

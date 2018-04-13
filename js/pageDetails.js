@@ -14,7 +14,7 @@ function setSubjectsInPage(subject) {
     inputCheckbox.setAttribute('class', 'sub-check');
 
     let inputCheckboxLabel = document.createElement('LABEL');
-    let inputCheckboxLabelText = document.createTextNode(subject[i]);
+    let inputCheckboxLabelText = document.createTextNode(subject[i].split('_').join(' '));
     inputCheckboxLabel.setAttribute('for', subject[i]);
     inputCheckboxLabel.appendChild(inputCheckboxLabelText);
 
@@ -22,6 +22,7 @@ function setSubjectsInPage(subject) {
     document.querySelector('#subjects-div').appendChild(inputCheckboxLabel);
     document.querySelector('#subjects-div').appendChild(document.createElement('BR'));
   }
+  checkUserSubjects();
 }
 
 function selectedSub() {
