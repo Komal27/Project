@@ -20,14 +20,12 @@ function validate() {
     var userDataPromise = getFromServer('http://localhost:3009/students/' + name);
     userDataPromise.then(function(responseData) {
       if (responseData.password == pass) {
-        let pageToLand;
-        if (responseData.semester === 1) {
-          pageToLand = 'sem1.html';
+      if (responseData.semester === 1) {
+          window.location.href  = 'sem1.html';
         } else {
-          pageTogo = 'portal.html';
+          window.location.href  = 'portal.html';
         }
         setInSession('userLoggedIn', responseData);
-        window.location.href = pageToLand;
       } else {
         document.getElementById('error').innerHTML = 'Enter Correct Password';
       }

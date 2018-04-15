@@ -12,6 +12,7 @@ function setSubjectsInPage(subject) {
     inputCheckbox.setAttribute('value', subject[i]);
     inputCheckbox.setAttribute('name', 'selectedSubjects');
     inputCheckbox.setAttribute('class', 'sub-check');
+    inputCheckbox.setAttribute('autocomplete', 'off');
 
     let inputCheckboxLabel = document.createElement('LABEL');
     let inputCheckboxLabelText = document.createTextNode(subject[i].split('_').join(' '));
@@ -26,12 +27,41 @@ function setSubjectsInPage(subject) {
 }
 
 function selectedSub() {
-    let allSubjects = document.querySelectorAll('input[name=selectedSubjects]');
-    let selectedResult = [];
-    for (var i = 0; i < allSubjects.length; i++) {
-      if (allSubjects[i].checked) {
-          selectedResult.push(allSubjects[i].value);
-      }
+  let allSubjects = document.querySelectorAll('input[name=selectedSubjects]');
+  let selectedResult = [];
+  for (var i = 0; i < allSubjects.length; i++) {
+    if (allSubjects[i].checked) {
+      selectedResult.push(allSubjects[i].value);
     }
-    setSubjectInUserCourseWork(selectedResult);
+  }
+  setSubjectInUserCourseWork(selectedResult);
+}
+
+function nextSem() {
+  var userValues = getFromSession('userLoggedIn');
+  let allGrades = userValues.grades;
+
+  var failgrade = allGrades.includes('d');
+  if (failgrade === true) {
+    console.log("Fail");
+    document.getElementById('message').innerHTML = "You cannot Enroll";
+  } else {
+    console.log("Pass");
+    window.location.href = "nextsem.html";
+  }
+}
+
+function newSubjects() {
+  var userValues = getFromSession('userLoggedIn');
+  let allGrades = userValues.grades;
+  console.log(allGrades);
+  var failgrade = allGrades.includes('d');
+  if (failgrade === true) {
+    console.log("Fail");
+    document.getElementById('message').innerHTML = "You cannot Enroll";
+  } else {
+    console.log("Pass");
+    incrementSem();
+  getNextSemSub() ;
+  }
 }

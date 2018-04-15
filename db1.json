@@ -18,7 +18,7 @@
       "lastName": "Bowmaker",
       "email": "nbowmaker1@mayoclinic.com",
       "gender": "Male",
-      "semester": 8,
+      "semester": 2,
       "cwid": "41-3868949",
       "courseWork": []
     },
@@ -56,13 +56,20 @@
       "courseWork": [
         "CPSC_121",
         "CPSC_122",
-        "MATH_150A"
+        "MATH_150A",
+        "MATH_270A"
+      ],
+      "grades": [
+        "a",
+        "b",
+        "c",
+        "d"
       ]
     }
   ],
   "allSubjects": [
     {
-      "id": "sem1",
+      "id": "1",
       "subjects": [
         "CPSC_121",
         "CPSC_122",
@@ -70,8 +77,28 @@
         "MATH_270A"
       ]
     },
-    {},
-    {},
+    {
+      "id": "2",
+      "subjects": [
+        "CPSC_311",
+        "CPSC_223",
+        "CPSC_254",
+        "CPSC_240",
+        "MATH_270B",
+        "MATH_150B"
+      ]
+    },
+    {
+      "id": "3",
+      "subjects": [
+        "CPSC_315",
+        "CPSC_362",
+        "CPSC_351",
+        "CPSC_301",
+        "MATH_332",
+        "MATH_338"
+      ]
+    },
     {}
   ]
 }
