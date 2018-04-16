@@ -1,50 +1,6 @@
 {
   "students": [
     {
-      "id": "rblaydon0",
-      "password": "8NT2jusb",
-      "firstName": "Rivkah",
-      "lastName": "Blaydon",
-      "email": "rblaydon0@wisc.edu",
-      "gender": "Female",
-      "semester": 1,
-      "cwid": "15-3720361",
-      "courseWork": []
-    },
-    {
-      "id": "nbowmaker1",
-      "password": "oieQbyr",
-      "firstName": "Nowell",
-      "lastName": "Bowmaker",
-      "email": "nbowmaker1@mayoclinic.com",
-      "gender": "Male",
-      "semester": 2,
-      "cwid": "41-3868949",
-      "courseWork": []
-    },
-    {
-      "id": "ekempton2",
-      "password": "7Ez8Hiv6e",
-      "firstName": "Ebeneser",
-      "lastName": "Kempton",
-      "email": "ekempton2@simplemachines.org",
-      "gender": "Male",
-      "semester": 8,
-      "cwid": "95-4302219",
-      "courseWork": []
-    },
-    {
-      "id": "fgibbs3",
-      "password": "eEwfjGTfQp",
-      "firstName": "Franchot",
-      "lastName": "Gibbs",
-      "email": "fgibbs3@slideshare.net",
-      "gender": "Male",
-      "semester": 1,
-      "cwid": "23-3626736",
-      "courseWork": []
-    },
-    {
       "id": "test",
       "password": "test",
       "firstName": "test first name",
@@ -54,16 +10,26 @@
       "semester": 1,
       "cwid": "23-test",
       "courseWork": [
-        "CPSC_121",
-        "CPSC_122",
-        "MATH_150A",
-        "MATH_270A"
-      ],
-      "grades": [
-        "a",
-        "b",
-        "c",
-        "d"
+        {
+          "id": 1,
+          "classes": [
+            {
+              "name": "CPSC_120",
+              "grade": "",
+              "remarks": ""
+            },
+            {
+              "name": "CPSC_122",
+              "grade": "",
+              "remarks": ""
+            },
+            {
+              "name": "GE_A2",
+              "grade": "",
+              "remarks": ""
+            }
+          ]
+        }
       ]
     }
   ],
@@ -71,10 +37,13 @@
     {
       "id": "1",
       "subjects": [
+        "CPSC_120",
         "CPSC_121",
         "CPSC_122",
+        "CPSC_131",
         "MATH_150A",
-        "MATH_270A"
+        "MATH_270A",
+        "GE_A2"
       ]
     },
     {
@@ -98,7 +67,6 @@
         "MATH_332",
         "MATH_338"
       ]
-    },
-    {}
+    }
   ]
 }

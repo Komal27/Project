@@ -5,17 +5,22 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheet/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="js/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body style="background-color:#154360">
   <div class="options">
     <button type="button" class="btn btn-warning ">Admin</button>
-    <button type="button" class="btn btn-warning"  onclick="window.open('http://localhost:3000/userGrades.html')">Professors</button>
-    <button type="button" class="btn btn-warning" onclick="window.open('http://localhost:3000/login.html')">Students</button>
+    <button type="button" class="btn btn-warning" onclick="openPage('studentSearch')">Professors</button>
+    <button type="button" class="btn btn-warning" onclick="openPage('login')">Students</button>
   </div>
 
 </body>
 
 </html>
+<script type="text/javascript">
+  function openPage(pageName) {
+    window.location.href = pageName + '.html';
+  }
+</script>

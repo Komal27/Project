@@ -19,16 +19,30 @@ function validate() {
   if (pass !== "" && name !== "") {
     var userDataPromise = getFromServer('http://localhost:3009/students/' + name);
     userDataPromise.then(function(responseData) {
-      if (responseData.password == pass) {
-      if (responseData.semester === 1) {
-          window.location.href  = 'sem1.html';
+        if (responseData.password == pass) {
+            setInSession('userLoggedIn', responseData);
+          window.location.href = 'portal.html'
         } else {
-          window.location.href  = 'portal.html';
+          document.getElementById('error').innerHTML = 'Enter Correct Password';
         }
+    });
+}
+}
+
+function userGrades() {
+  var username = document.forms["proflogin"]["username"].value;
+  var cwid = document.forms["proflogin"]["cwid"].value;
+  if (username === "") {
+    document.getElementById('error').innerHTML = 'Enter Username';
+    return;
+  }
+
+  if (username !== "" && username !== null) {
+    var userPromise = getFromServer('http://localhost:3009/students/' + username);
+    userPromise.then(function(responseData) {
+      if (cwid === responseData.cwid)
         setInSession('userLoggedIn', responseData);
-      } else {
-        document.getElementById('error').innerHTML = 'Enter Correct Password';
-      }
+      window.location.href = "userGradesInput.html";
     });
   }
 }

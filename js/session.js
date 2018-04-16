@@ -5,3 +5,8 @@ function setInSession(key, value) {
 function getFromSession(key) {
   return JSON.parse(window.sessionStorage.getItem(key));
 }
+
+function logout() {
+  setInSession('userLoggedIn', {});
+  window.location.href = 'index.html';
+}

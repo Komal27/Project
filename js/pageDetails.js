@@ -1,7 +1,12 @@
 function getuserDetails() {
   var userValues = getFromSession('userLoggedIn');
-  document.getElementById('student-title').innerHTML = "Welcome " + userValues.firstName;
-  document.getElementById('student-sem').innerHTML = "Semester: " + userValues.semester;
+  const userDescArray = ["Welcome " + userValues.firstName, "semester NO: " + userValues.semester];
+  for (var i = 0; i < userDescArray.length; i++) {
+    let $p = document.createElement('P');
+    let $text = document.createTextNode(userDescArray[i]);
+    $p.appendChild($text);
+    document.querySelector('#student-desc').appendChild($p);
+  }
 }
 
 function setSubjectsInPage(subject) {
@@ -26,7 +31,7 @@ function setSubjectsInPage(subject) {
   checkUserSubjects();
 }
 
-function selectedSub() {
+function enrollSelectedSub() {
   let allSubjects = document.querySelectorAll('input[name=selectedSubjects]');
   let selectedResult = [];
   for (var i = 0; i < allSubjects.length; i++) {
@@ -35,20 +40,6 @@ function selectedSub() {
     }
   }
   setSubjectInUserCourseWork(selectedResult);
-}
-
-function nextSem() {
-  var userValues = getFromSession('userLoggedIn');
-  let allGrades = userValues.grades;
-
-  var failgrade = allGrades.includes('d');
-  if (failgrade === true) {
-    console.log("Fail");
-    document.getElementById('message').innerHTML = "You cannot Enroll";
-  } else {
-    console.log("Pass");
-    window.location.href = "nextsem.html";
-  }
 }
 
 function newSubjects() {
@@ -62,6 +53,6 @@ function newSubjects() {
   } else {
     console.log("Pass");
     incrementSem();
-  getNextSemSub() ;
+    getNextSemSub();
   }
 }

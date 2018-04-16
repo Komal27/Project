@@ -9,7 +9,6 @@ function getnewuserDetails() {
 function getnewSubjects() {
   var userValues = getFromSession('userLoggedIn');
   let newsem = userValues.semester+1;
-  console.log(newsem);
   getFromServer('http://localhost:3009/allSubjects/' + newsem).then(function(responseData) {
   setSubjectsInPage(responseData.subjects);
    });

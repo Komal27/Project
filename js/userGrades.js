@@ -1,19 +1,13 @@
-function userGrades() {
-  var username = document.forms["proflogin"]["username"].value;
-  var cwid = document.forms["proflogin"]["cwid"].value;
-  if (username === "") {
-    document.getElementById('error').innerHTML = 'Enter Username';
-    return;
-  }
+function nextSem() {
+  var userValues = getFromSession('userLoggedIn');
+  let allGrades = userValues.grades;
 
-
-  if (username !== "" && username !== null) {
-    var userPromise = getFromServer('http://localhost:3009/students/' + username);
-    userPromise.then(function(responseData) {
-      if (cwid === responseData.cwid)
-        setInSession('userLoggedIn', responseData);
-      window.location.href = "userGradesInput.html";
-
-    });
+  var failgrade = allGrades.includes('d');
+  if (failgrade) {
+    console.log("Fail");
+    document.getElementById('message').innerHTML = "You cannot Enroll";
+  } else {
+    console.log("Pass");
+    window.location.href = "nextsem.html";
   }
 }
