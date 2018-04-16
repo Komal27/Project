@@ -45,13 +45,10 @@ function enrollSelectedSub() {
 function newSubjects() {
   var userValues = getFromSession('userLoggedIn');
   let allGrades = userValues.grades;
-  console.log(allGrades);
   var failgrade = allGrades.includes('d');
   if (failgrade === true) {
-    console.log("Fail");
     document.getElementById('message').innerHTML = "You cannot Enroll";
   } else {
-    console.log("Pass");
     incrementSem();
     getNextSemSub();
   }

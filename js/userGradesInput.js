@@ -25,14 +25,18 @@ function setCourses(courses) {
 
 }
 
-function gradeSubjects() {
+function submitGrades() {
   let allCourses = document.querySelectorAll('input[name=userselectedCourses]');
   let submitGrades = [];
   for (var i = 0; i < allCourses.length; i++) {
     if (allCourses[i].value != "") {
-      submitGrades.push(allCourses[i].value);
+      const objectToPush = {
+        name: allCourses[i].id,
+        grade: allCourses[i].value
+      };
+      submitGrades.push(objectToPush);
     }
   }
-  gradesForUser(submitGrades);
-  console.log(submitGrades);
+  submitStudentGradesInDB(submitGrades);
+  
 }

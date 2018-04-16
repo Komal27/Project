@@ -48,9 +48,7 @@ function checkUserSubjects() {
 
 function getNextSemSub() {
   const updatedSem = document.getElementById('student-sem').innerHTML;
-  console.log(updatedSem);
   getFromServer('http://localhost:3009/allSubjects/' + updatedSem).then(function(responseData) {
     setSubjectsInPage(responseData.subjects);
-    console.log(responseData.subjects);
   });
 }
